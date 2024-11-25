@@ -14,6 +14,7 @@
     --fs-24: 1.5rem;
     --fs-18: 1.125rem;
     --container: 69.375rem;
+    --transition: 250ms ease-in-out;
 }
 
 html {
@@ -35,14 +36,22 @@ body {
 }
 
 a {
-    display: inline-block;
+    transition: color var(--transition);
 }
 
 a:hover {
     color: var(--accent);
 }
 
-a:hover > svg > path{
+.header_social {
+    display: inline-block;
+}
+
+.header_social > svg > path {
+    transition: fill var(--transition);
+}
+
+.header_social:hover > svg > path{
     fill: var(--accent)
 }
 
