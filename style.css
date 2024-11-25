@@ -43,16 +43,13 @@ a:hover {
     color: var(--accent);
 }
 
-.header_social {
-    display: inline-block;
-}
-
-.header_social > svg > path {
-    transition: fill var(--transition);
-}
-
-.header_social:hover > svg > path{
-    fill: var(--accent)
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -69,12 +66,49 @@ a:hover {
 
 /* HEADER */
 .header {
+    margin-top: 20px;
+}
 
+.header_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px 25px;
 }
 
 .header_home {
     font-size: 1.5rem;
     font-size: clamp(1.5rem, 1.02rem + 2.04vw, 2rem);
+    line-height: 1;
     color: var(--text1);
     text-decoration: none;
+    flex: 1 0 100%;
+}
+
+.header_social {
+    display: inline-block;
+}
+
+.header_social > svg > path {
+    transition: fill var(--transition);
+}
+
+.header_social:hover > svg > path{
+    fill: var(--accent)
+}
+
+@media (min-width: 37.5em) {
+    .header_nav {
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        gap: 32px;
+    }
+
+    .header_home {
+        flex: 1;
+        margin-inline-end: auto;
+    }
+
 }
