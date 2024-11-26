@@ -429,6 +429,7 @@
   
   .skills__description {
     margin-block-end: 0;
+    text-align: center;
   }
   
   .skills__rings {
@@ -453,6 +454,10 @@
     .skills__rings {
       translate: 40% 50%;
     }
+
+    .skills__description {
+      text-align: left;
+    }
   }
   
   @media (min-width: 62.5em) {
@@ -465,6 +470,10 @@
     .skills__rings {
       translate: -40% 50%;
       left: 100%;
+    }
+
+    .skills__description {
+      text-align: left;
     }
   }
   
