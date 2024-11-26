@@ -726,6 +726,19 @@
     translate: -75%;
   }
   
+  .button {
+    cursor: pointer;
+  }
+
+  .button:hover {color: var(--accent);}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    color: var(--text1);
+  }
+  
   @media (min-width: 37.5em) {
     .contact__rings {
       bottom: 47px;
